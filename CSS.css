@@ -1,4 +1,4 @@
-.navigation{
+.NavBar{
 	float: right;
 	width: 900px;
 	border: 1px solid none;
@@ -9,18 +9,18 @@
 	
 	
 }
-.navigation ul li{
+.NavBar ul li{
 	float: left;
 	margin-right: 18px;
 	margin-bottom: 8px;
 	text-align: center;
 	list-style-type: none;
  }
-.navigation ul li a{
+.NavBar ul li a{
 	text-decoration: none;
 	color: black;	
 }
-.navigation ul li::after{
+.NavBar ul li::after{
 	content:'';
 	width: 0%;
 	height: 2px;
@@ -29,6 +29,6 @@
 	margin: auto; 
 	transition: 0.5s;
 }
-.navigation ul li:hover::after{
+.NavBar ul li:hover::after{
 	width: 100%;
 }
