@@ -1,0 +1,184 @@
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 10px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.uni-name {
+    position: absolute;
+    margin-left: 40%;
+    font-size: 24px;
+    color: gold;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: black;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: gold;
+    color: black;
+}
+
+nav a.active {
+    background-color: gold;
+    color: black;
+}
+
+/* DROPDOWNS */
+.academics-dropdown-content,
+.faculty-dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.academics-dropdown:hover .academics-dropdown-content,
+.faculty-dropdown:hover .faculty-dropdown-content {
+    display: block;
+}
+
+.academics-dropdown-content a,
+.faculty-dropdown-content a {
+    color: black;
+    background: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.academics-dropdown-content a:hover,
+.faculty-dropdown-content a:hover {
+    background-color: gold;
+}
+
+/* WELCOME SECTION */
+.welcome {
+    background-image: url('../img/placeholder.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.apply-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.apply-button:hover {
+    background: white;
+    color: black;
+}
+
+/* DEPARTMENTS SECTION */
+.department-card {
+    width: 200px;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px gray;
+    background: #f5f5f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.department-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    display: block; /* Always show */
+}
+
+.see-now-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: black;
+    color: gold;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.see-now-button:hover {
+    background: gold;
+    color: black;
+}
+
+
+/* ANNOUNCEMENTS */
+.announcements {
+    padding: 20px;
+    background: #f9f9f9;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
