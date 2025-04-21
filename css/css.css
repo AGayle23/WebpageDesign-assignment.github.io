@@ -1,3 +1,4 @@
+/*HOMEPAGE*/
 /* HEADER */
 .header {
     display: flex;
@@ -6,26 +7,22 @@
     background: black;
     padding: 10px;
 }
-
 .logo {
     width: 70px;
     height: auto;
     margin-right: 15px;
 }
-
 .uni-name {
     position: absolute;
     margin-left: 40%;
     font-size: 24px;
     color: gold;
 }
-
 /* NAVIGATION */
 .navbar {
     background: black;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -34,12 +31,10 @@ nav ul {
     flex-wrap: wrap;
     margin: 0;
 }
-
 nav ul li {
     position: relative;
     margin: 0 15px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
@@ -47,18 +42,15 @@ nav a {
     display: block;
     transition: 0.3s;
 }
-
 nav a:hover {
     background-color: gold;
     color: black;
 }
-
 nav a.active {
     background-color: gold;
     color: black;
 }
-
-/* DROPDOWNS */
+/* NAVIGATION DROPDOWNS */
 .academics-dropdown-content,
 .faculty-dropdown-content {
     display: none;
@@ -69,12 +61,10 @@ nav a.active {
     min-width: 200px;
     z-index: 1;
 }
-
 .academics-dropdown:hover .academics-dropdown-content,
 .faculty-dropdown:hover .faculty-dropdown-content {
     display: block;
 }
-
 .academics-dropdown-content a,
 .faculty-dropdown-content a {
     color: black;
@@ -82,12 +72,10 @@ nav a.active {
     padding: 10px;
     text-align: left;
 }
-
 .academics-dropdown-content a:hover,
 .faculty-dropdown-content a:hover {
     background-color: gold;
 }
-
 /* WELCOME SECTION */
 .welcome {
     background-image: url('../img/placeholder.jpg'); 
@@ -100,14 +88,12 @@ nav a.active {
     align-items: center;
     justify-content: center;
 }
-
 .welcome-overlay {
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
     text-align: center;
     border-radius: 10px;
 }
-
 .apply-button {
     margin-top: 15px;
     padding: 10px 20px;
@@ -117,63 +103,377 @@ nav a.active {
     border-radius: 5px;
     font-weight: bold;
 }
-
 .apply-button:hover {
     background: white;
     color: black;
 }
-
 /* DEPARTMENTS SECTION */
+.departments {
+    text-align: center;
+    padding: 40px 20px;
+}
 .department-card {
-    width: 200px;
+    width: 230px;
+    height: 250px;
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px gray;
     background: #f5f5f5;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.4s ease;
+    cursor: pointer;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+}  
 .department-card:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    height: auto; /* Allow it to grow naturally */
+    z-index: 2;
 }
-
 .department-card img {
     width: 100%;
-    height: 120px;
+    height: 140px;
     object-fit: cover;
+    display: block;
 }
-
 .card-content {
-    padding: 10px;
-    display: block; /* Always show */
+    padding: 15px 10px 15px 15px;
+    max-height: 160px; /* Hide extra content */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
 }
-
-.see-now-button {
-    display: inline-block;
+/* Hidden paragraph */
+.card-content p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    margin: 0;
+  }
+.department-card:hover .card-content p{
+    max-height: 1000px; /* Show full content on hover */
+    opacity: 1;
     margin-top: 10px;
-    padding: 5px 15px;
+}
+.card-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(245, 245, 245, 0), #f5f5f5);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.department-card:hover .card-content::after {
+    opacity: 0;
+}
+.card-content h3 {
+    margin-top: 0;
+}
+.see-now-button {
+    margin-top: 10px;
+    padding: 8px 16px;
     background: black;
     color: gold;
-    text-decoration: none;
-    border-radius: 3px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
-
 .see-now-button:hover {
     background: gold;
     color: black;
 }
-
-
 /* ANNOUNCEMENTS */
 .announcements {
     padding: 20px;
     background: #f9f9f9;
     margin-top: 30px;
 }
+
+/*PAGE - FACULTY*/
+/* OVERVIEW PAGE STYLES */
+.faculty-intro, .programmes, .faculty-links {
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+}
+.faculty-intro {
+    background-image: url('../img/placeholder.jpg');
+    background-size: cover ;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+/* MEET THE DEAN SECTION */
+.meet-dean {
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+}
+.dean-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    width: 75%;
+}
+.dean-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid gold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.dean-bio {
+    max-width: 600px;
+    text-align: left;
+}
+.dean-bio h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+.dean-bio p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/*MISSION & OBJECTIVES*/
+.mission-objectives {
+    display: flex;
+    justify-content: space-around;
+    background: #f9f9f9;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.mission, .objectives {
+    width: 75%;
+    min-width: 300px;
+    margin: 10px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid gold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/*dept. section in home page*/
+/*PROGRAMME SECTION - final*/
+.programme-section {
+    padding: 2px 20px 40px 20px;
+    text-align: center;
+}
+.programme-section h2 {
+    margin-bottom: 40px;
+    color: #222;
+}
+/* GRID LAYOUT*/
+.programme-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+/* PROGRAMME CARD */
+.programme-card {
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 360px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.programme-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* Background IMAGE BLUR */
+.programme-background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: filter 0.3s ease;
+}
+/* Blur on hover */
+.programme-card:hover .programme-background-blur {
+    filter: blur(4px) brightness(0.8);
+}
+/* Match background image */
+.programme-card[style*="background-image"] .programme-background-blur {
+    background-image: inherit;
+}
+/* PROGRAMME CONTENT */
+.programme-content {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    border-radius: 0 0 15px 15px;
+}
+.programme-content h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+/* HIDDEN INFO ON HOVER */
+.programme-hover {
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+}
+.programme-card:hover .programme-hover {
+    opacity: 1;
+    max-height: 260px;
+}
+/* LIST STYLE */
+.programme-hover ul {
+    text-align: left;
+    padding-left: 18px;
+    font-size: 0.9rem;
+}
+.programme-hover li{
+    margin-bottom: 6px;
+}
+/* MORE DETAILS BUTTON */
+.details-btn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    background-color: gold;
+    color:black;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.details-btn:hover {
+    color: whitesmoke;
+    background-color: #e6b800;
+}
+/*BUTTON POP UP DETAILS*/
+.programme-modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center; /*Center modal */
+    align-items: center;
+}
+/* MODAL CONTENT BOX */
+.programme-modal-content {
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    margin: 10% auto;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.programme-title {
+    position: sticky;
+    top: 0;
+    background-color: gold;
+    color: #000;
+    padding: 10px 0;
+    border-radius: 12px 12px 0 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid green;
+    z-index: 10;
+    
+}
+/* MODAL BODY */
+.modal-body {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+}  
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: grey;
+    font-size: 36px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.close-btn:hover {
+    color: black;
+}  
+/* DOWNLOAD BUTTON */
+.download-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 18px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-left:25%;
+}
+.download-btn:hover {
+    background-color: #e6b800;
+    color: white;
+}
+  
+/*PAGE - COMPUTER STUDIES*/
+/*PROGRAMME SECTION*/
+.programmes ul {
+    list-style: none;
+    padding-left: 0;
+}
+.programmes li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+
+
+
+
 
 /* FOOTER */
 footer {
