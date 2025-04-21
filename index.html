@@ -38,7 +38,7 @@
     <main>
         <section class="welcome">
             <div class="welcome-overlay">
-                <h2>Welcome to the Faculty of Science & Technology</h2>
+                <h2>Welcome to the Mico University College</h2>
                 <p>Discover innovation, technology, and excellence at Mico University College.</p>
                 <a class="apply-button" href="apply.html">Apply Now</a>
             </div>
@@ -46,46 +46,56 @@
         
         <section class="departments">
             <h2>Our Departments</h2>
-
-            <div class="department-card">
-                <img src="img/placeholder.jpg" alt="Natural Sciences">
-                <div class="card-content">
-                    <h3>Natural Sciences</h3>
-                    <p>Explore the wonders of biology, chemistry, and physics.</p>
-                    <a href="NaturalSciences.html" class="see-now-button">See Now</a>
-                </div>
+            <div class="department-card" onclick="location.href='NaturalSciences.html'">
+              <img src="img/placeholder.jpg" alt="Natural Sciences">
+              <div class="card-content">
+                <h3>Natural Sciences</h3>
+                <p>Explore the wonders of biology, chemistry, and physics.</p>
+                <p>Explore the wonders of biology, chemistry, and physics.</p>
+                <button class="see-now-button" onclick="event.stopPropagation(); window.location.href='NaturalSciences.html';">
+                  <i class="fa-solid fa-up-right-from-square"></i> See More
+                </button>
+              </div>
             </div>
-            <div class="department-card">
-                <img src="img/placeholder.jpg" alt="Human Ecology">
-                <div class="card-content">
-                    <h3>Human Ecology</h3>
-                    <p>Explore the wonders of nutrition, wellness, and hospitality.</p>
-                    <a href="HumanEcology.html" class="see-now-button">See Now</a>
-                </div>
+            <div class="department-card" onclick="location.href='HumanEcology.html'">
+              <img src="img/placeholder.jpg" alt="Human Ecology">
+              <div class="card-content">
+                <h3>Human Ecology</h3>
+                <p>Explore the wonders of nutrition, wellness, and hospitality.</p>
+                <button class="see-now-button" onclick="event.stopPropagation(); window.location.href='HumanEcology.html';">
+                  <i class="fa-solid fa-up-right-from-square"></i> See More
+                </button>
+              </div>
             </div>
-            <div class="department-card">
-                <img src="img/placeholder.jpg" alt="Industrial Technology">
-                <div class="card-content">
-                    <h3>Industrial Technology</h3>
-                    <p>Explore innovation through engineering and design.</p>
-                    <a href="IndustrialTechnology.html" class="see-now-button">See Now</a>
-                </div>
+            <div class="department-card" onclick="location.href='IndustrialTechnology.html'">
+              <img src="img/placeholder.jpg" alt="Industrial Technology">
+              <div class="card-content">
+                <h3>Industrial Technology</h3>
+                <p>Explore the wonders of nutrition, wellness, and hospitality.</p>
+                <button class="see-now-button" onclick="event.stopPropagation(); window.location.href='IndustrialTechnology.html';">
+                  <i class="fa-solid fa-up-right-from-square"></i> See More
+                </button>
+              </div>
             </div>
-            <div class="department-card">
-                <img src="img/placeholder.jpg" alt="Computer Studies">
-                <div class="card-content">
-                    <h3>Computer Studies</h3>
-                    <p>Explore coding, systems, and digital innovation.</p>
-                    <a href="ComputerStudies.html" class="see-now-button">See Now</a>
-                </div>
+            <div class="department-card" onclick="location.href='ComputerStudies.html'">
+              <img src="img/placeholder.jpg" alt="Computer Studies">
+              <div class="card-content">
+                <h3>Computer Studies</h3>
+                <p>Explore the wonders of nutrition, wellness, and hospitality.</p>
+                <button class="see-now-button" onclick="event.stopPropagation(); window.location.href='ComputerStudies.html';">
+                  <i class="fa-solid fa-up-right-from-square"></i> See More
+                </button>
+              </div>
             </div>
-            <div class="department-card">
-                <img src="img/placeholder.jpg" alt="Mathematics">
-                <div class="card-content">
-                    <h3>Mathematics</h3>
-                    <p>Explore logical reasoning and problem solving.</p>
-                    <a href="Mathematics.html" class="see-now-button">See Now</a>
-                </div>
+            <div class="department-card" onclick="location.href='Mathematics.html'">
+              <img src="img/placeholder.jpg" alt="Mathematics">
+              <div class="card-content">
+                <h3>Mathematics</h3>
+                <p>Explore the wonders of nutrition, wellness, and hospitality.</p>
+                <button class="see-now-button" onclick="event.stopPropagation(); window.location.href='Mathematics.html';">
+                  <i class="fa-solid fa-up-right-from-square"></i> See More
+                </button>
+              </div>
             </div>
         </section>
         
@@ -98,10 +108,15 @@
                 <li><strong>May 5:</strong> Innovation & Research Symposium</li>
             </ul>
         </section>
+
     </main>
+
     
     <footer>
         <p>&copy; 2025 Faculty of Science and Technology - Mico University College</p>
     </footer>
+    <!-- JavaScript here -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
