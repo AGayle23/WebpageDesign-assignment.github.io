@@ -78,7 +78,7 @@ nav a.active {
 }
 /* WELCOME SECTION */
 .welcome {
-    background-image: url('../img/placeholder.jpg'); 
+    background-image: url('../img/micogate.jpg'); 
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -206,7 +206,7 @@ nav a.active {
     text-align: center;
 }
 .faculty-intro {
-    background-image: url('../img/placeholder.jpg');
+    background-image: url('../img/micogate.jpg.jpg');
     background-size: cover ;
     background-position: center;
     color: white;
